@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: auto;
+  background-color: rgb(34, 26, 26);
+}
+
+.container {
+  height: 100vh;
+  background-color: rgb(34, 26, 26);
+}
+
+.description {
+  height: 80px;
+  background-color: rgb(28, 29, 25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description h2 {
+  font-size: 2rem;
+  color: orangered;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.details h3 {
+  text-align: center;
+  margin: 0;
+  font-size: 2.8rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0 10px;
+  height: 75%;
+}
+li {
+  height: 80px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding: 0 10%;
+  background-color: gold;
+  animation: list-animation 0.5s ease-in;
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+
+li:hover {
+  transform: scale(1.2);
+}
+li span {
+  font-size: 2.9rem;
+  font-style: italic;
+  font-weight: 700;
+  color: purple;
+}
+
+.hot {
+  color: tomato;
+}
+.cold {
+  color: dodgerblue;
+}
+
+.detail-hot {
+  background: url("../assets/hot.jpg");
+  background-size: cover;
+}
+.detail-cold {
+  background: url("../assets/cold.jpg");
+  background-size: cover;
+}
+
+@keyframes list-animation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+form {
+  background-color: gold;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  padding: 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+label,
+input {
+  width: 80%;
+  margin: auto;
+}
+label {
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 700;
+}
+input {
+  border: none;
+  padding: 1rem 2rem;
+  outline: none;
+  border-radius: 5px;
+}
+button {
+  padding: 0.3rem 4rem;
+  border: none;
+  border-radius: 5px;
+  margin: auto;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background 0.3s;
+}
+button:hover {
+  background-color: crimson;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    padding: 40px;
+  }
+  input,
+  label {
+    width: 40%;
+  }
+  li {
+    width: 50%;
+    margin: 10px auto;
+  }
+  .description h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  input {
+    width: 150px;
+    padding: 10px;
+  }
+  button {
+    width: 100px;
+    padding: 0;
+    font-size: initial;
+  }
+  li {
+    font-size: 1.5rem;
+  }
+  li span {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  li {
+    font-size: 1.2rem;
+  }
+  li span {
+    font-size: 1.5rem;
+  }
+}

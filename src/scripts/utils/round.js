@@ -1,0 +1,1 @@
+export const round = (temp) => Math.round(temp) 
