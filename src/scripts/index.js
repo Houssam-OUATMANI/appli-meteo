@@ -29,7 +29,9 @@ const getCurrentWeatherBasedOnLocation = async (URL) => {
     const wData = await response.json();
     return wData;
   } catch (error) {
-    throw new Error(error);
+    console.error(error);
+    CONTAINER.innerHTML =
+      "<h2 style=text-align:center;>Error lors de la recupération des données</h2>";
   }
 };
 
@@ -43,7 +45,9 @@ const getCurrentWeatherBasedOnInput = async () => {
     INPUT.value = "";
     return wData;
   } catch (error) {
-    throw new Error(error);
+    console.error(error);
+    CONTAINER.innerHTML =
+      "<h2 style=text-align:center;>Error lors de la recupération des données</h2>";
   }
 };
 
