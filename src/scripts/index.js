@@ -68,7 +68,7 @@ const displayData = (wData) => {
   <li>Maximale <span class=${ternaire(temp_max, 12)}>${round(
     temp_max
   )} °C</span> </li>
-  <li>Ressentie <span class=${ternaire(ternaire, 12)}>${round(
+  <li>Ressentie <span class=${ternaire(feels_like, 12)}>${round(
     feels_like
   )} °C</span> </li>
   <li>Humidité <span >${round(humidity)} %</span></li>
